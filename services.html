@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务介绍 - 御风工作室</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body class="rainbow">
+    <header>
+        <nav>
+            <div class="logo">御风工作室</div>
+            <button class="menu-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="services.html" class="active">服务介绍</a></li>
+                <li><a href="recruit.html">人员招募</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><button class="theme-toggle">切换黑夜模式</button></li>
+                <li>
+                    <input type="text" class="search-input" placeholder="搜索...">
+                    <ul class="autocomplete-list"></ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="services.html" class="active">服务介绍</a></li>
+                <li><a href="recruit.html">人员招募</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><button class="theme-toggle">切换黑夜模式</button></li>
+                <li>
+                    <input type="text" class="search-input" placeholder="搜索...">
+                    <ul class="autocomplete-list"></ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>我们的服务</h1>
+        <p>我们提供广泛的服务内容</p>
+    </section>
+
+    <div class="controls">
+        <select id="background-theme">
+            <option value="rainbow">彩虹渐变</option>
+            <option value="starry">星空</option>
+            <option value="waves">波浪</option>
+            <option value="aurora">极光</option>
+            <option value="sunset">日落</option>
+            <option value="forest">森林</option>
+        </select>
+    </div>
+
+    <section class="services">
+        <div class="service-item">
+            <h3>网站开发</h3>
+            <p>从静态网站到复杂的动态应用，我们提供全栈开发服务。</p>
+        </div>
+        <div class="service-item">
+            <h3>UI/UX设计</h3>
+            <p>设计直观、吸引人的用户界面，提升用户体验。</p>
+        </div>
+        <div class="service-item">
+            <h3>品牌策划</h3>
+            <p>通过视觉设计和内容策略，塑造独特的品牌形象。</p>
+        </div>
+        <div class="service-item">
+            <h3>数字营销</h3>
+            <p>通过SEO、社交媒体和广告，提升您的在线影响力。</p>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>成功案例</h2>
+        <div class="case-grid">
+            <div class="case-item">
+                <div class="card-front">
+                    <h3>电商平台</h3>
+                    <p>为某零售品牌开发了高性能电商网站，销售额提升30%。</p>
+                </div>
+                <div class="card-back">
+                    <h3>案例详情</h3>
+                    <p>优化了网站性能，支持大规模用户访问。</p>
+                </div>
+            </div>
+            <div class="case-item">
+                <div class="card-front">
+                    <h3>品牌重塑</h3>
+                    <p>为初创公司设计了全新品牌形象，市场认知度提高50%。</p>
+                </div>
+                <div class="card-back">
+                    <h3>案例详情</h3>
+                    <p>通过视觉和内容策略提升品牌影响力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="back-to-top">↑</button>
+
+    <footer>
+        <p>© 2025 御风工作室. 保留所有权利。</p>
+    </footer>
+</body>
+</html>

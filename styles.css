@@ -1,0 +1,925 @@
+/* 定义全局 CSS 变量，用于设置主题颜色和透明度 */
+:root {
+    --text-color: #2d2d2d;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --button-bg: #1714c9;
+    --button-hover: #1714c9;
+    --email-button-bg: #1714c9;
+    --email-button-hover: #1714c9;
+    --link-color: #2d2d2d;
+    --link-hover: #1714c9;
+    --search-bg: rgba(255, 255, 255, 0.9);
+    --search-border: #1714c9;
+    --autocomplete-bg: rgba(255, 255, 255, 0.95);
+    --autocomplete-hover: #f0f0f0;
+}
+
+/* 定义暗黑模式的 CSS 变量，覆盖默认主题的颜色 */
+body.dark-mode {
+    --text-color: #e0e0e0;
+    --card-bg: rgba(50, 50, 50, 0.9);
+    --header-bg: rgba(50, 50, 50, 0.95);
+    --button-bg: #1714c9;
+    --button-hover: #1714c9;
+    --email-button-bg: #ffcc00;
+    --email-button-hover: #cc9900;
+    --link-color: #e0e0e0;
+    --link-hover: #1714c9;
+    --search-bg: rgba(50, 50, 50, 0.9);
+    --search-border: #ffcc00;
+    --autocomplete-bg: rgba(50, 50, 50, 0.95);
+    --autocomplete-hover: #666;
+}
+
+/* 定义全局 body 样式，设置页面基础样式 */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background 0.5s ease;
+}
+
+/* 定义彩虹背景主题样式 */
+body.rainbow {
+    background: linear-gradient(135deg, #ff6f61, #ffb400, #00ff87, #00b7eb, #ff69b4, #ff6f61);
+    background-size: 600% 600%;
+    animation: rainbow 15s ease infinite;
+}
+
+/* 定义暗黑模式下的彩虹背景样式 */
+body.dark-mode.rainbow {
+    background: linear-gradient(135deg, #4a2e2e, #4a3c00, #004d2e, #00384a, #4a2e4a, #4a2e2e);
+}
+
+/* 为彩虹背景添加伪元素，用于覆盖效果 */
+body.rainbow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 定义彩虹背景动画 */
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 定义星空背景主题样式 */
+body.starry {
+    background: radial-gradient(circle at top, #1a1a3d, #000);
+    overflow-x: hidden;
+}
+
+/* 为星空背景添加伪元素，模拟星星 */
+body.starry::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><circle cx="75" cy="75" r="1" fill="white" opacity="0.4"/></svg>') repeat;
+    animation: starry 80s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 定义暗黑模式下的星空背景样式 */
+body.dark-mode.starry::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><circle cx="75" cy="75" r="1" fill="silver" opacity="0.6"/></svg>') repeat;
+}
+
+/* 定义星空背景动画 */
+@keyframes starry {
+    0% { background-position: 0 0; }
+    100% { background-position: 1200px 1200px; }
+}
+
+/* 定义波浪背景主题样式 */
+body.waves {
+    background: linear-gradient(180deg, #00b7eb, #005f73);
+    position: relative;
+}
+
+/* 为波浪背景添加伪元素，模拟波浪效果 */
+body.waves::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.25)" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,197.3C960,213,1056,203,1152,181.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x bottom;
+    animation: wave 12s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 定义暗黑模式下的波浪背景样式 */
+body.dark-mode.waves {
+    background: linear-gradient(180deg, #00384a, #002b36);
+}
+
+/* 定义波浪动画 */
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1440px; }
+}
+
+/* 定义极光背景主题样式 */
+body.aurora {
+    background: linear-gradient(45deg, #00ff87, #60efff, #0061ff, #45f3ff, #00ff87);
+    background-size: 500% 500%;
+    animation: aurora 18s ease infinite;
+}
+
+/* 为极光背景添加伪元素，模拟光晕效果 */
+body.aurora::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 定义暗黑模式下的极光背景样式 */
+body.dark-mode.aurora {
+    background: linear-gradient(45deg, #004d2e, #00384a, #001f4d, #002b36, #004d2e);
+}
+
+/* 定义极光动画 */
+@keyframes aurora {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 定义日落背景主题样式 */
+body.sunset {
+    background: linear-gradient(180deg, #ff6f61, #ffb400, #ff1493);
+    position: relative;
+}
+
+/* 为日落背景添加伪元素，模拟光点效果 */
+body.sunset::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><circle cx="75" cy="75" r="8" fill="rgba(255,255,255,0.15)"/></svg>') repeat;
+    opacity: 0.25;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 定义暗黑模式下的日落背景样式 */
+body.dark-mode.sunset {
+    background: linear-gradient(180deg, #4a2e2e, #4a3c00, #4a2e4a);
+}
+
+/* 定义森林背景主题样式 */
+body.forest {
+    background: linear-gradient(180deg, #2d6a4f, #1b4332);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 为森林背景添加伪元素，模拟树木效果 */
+body.forest::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M100,40L80,160H120Z" fill="rgba(0,80,0,0.3)"/></svg>') repeat;
+    opacity: 0.35;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 定义暗黑模式下的森林背景样式 */
+body.dark-mode.forest {
+    background: linear-gradient(180deg, #1b4332, #0a2f1f);
+}
+
+/* 定义页眉样式 */
+header {
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 定义导航容器样式 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 定义 logo 样式 */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--button-bg);
+    letter-spacing: 1px;
+}
+
+/* 定义导航链接列表样式 */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    align-items: center;
+}
+
+/* 定义导航链接样式 */
+.nav-links li a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+/* 定义导航链接悬停样式 */
+.nav-links li a:hover {
+    color: var(--link-hover);
+    transform: translateY(-2px);
+}
+
+/* 定义当前激活的导航链接样式 */
+.nav-links li a.active {
+    color: var(--link-hover);
+    border-bottom: 3px solid var(--link-hover);
+    padding-bottom: 2px;
+}
+
+/* 定义搜索框样式 */
+.search-input {
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--search-border);
+    border-radius: 8px;
+    background: var(--search-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    width: 150px;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+/* 定义搜索框聚焦样式 */
+.search-input:focus {
+    outline: none;
+    border-color: var(--link-hover);
+}
+
+/* 定义小屏幕（最大宽度768px）下的自动补全列表样式 */
+@media (max-width: 768px) {
+    .autocomplete-list {
+        width: 100%;
+        max-width: calc(100vw - 2rem);
+        left: 0;
+        top: calc(100% + 0.5rem);
+        box-sizing: border-box;
+    }
+    .mobile-menu .autocomplete-list {
+        width: 100%;
+        max-width: calc(100vw - 2rem);
+        left: 0;
+        top: calc(100% + 0.5rem);
+    }
+}
+
+/* 定义自动补全列表项悬停样式 */
+.autocomplete-list li:hover {
+    background: var(--autocomplete-hover);
+}
+
+/* 定义移动端菜单切换按钮样式 */
+.menu-toggle {
+    display: none;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, outline 0.3s;
+}
+
+/* 定义移动端菜单切换按钮悬停样式 */
+.menu-toggle:hover {
+    background: var(--button-hover);
+}
+
+/* 定义移动端菜单样式 */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--header-bg);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+}
+
+/* 定义移动端菜单链接列表样式 */
+.mobile-menu ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 定义移动端菜单链接样式 */
+.mobile-menu li a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    display: block;
+    padding: 0.5rem;
+}
+
+/* 定义移动端菜单链接悬停样式 */
+.mobile-menu li a:hover {
+    color: var(--link-hover);
+}
+
+/* 定义移动端菜单激活链接样式 */
+.mobile-menu li a.active {
+    color: var(--link-hover);
+}
+
+/* 定义移动端菜单主题切换按钮样式 */
+.mobile-menu .theme-toggle {
+    background: var(--button-bg);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* 定义移动端菜单主题切换按钮悬停样式 */
+.mobile-menu .theme-toggle:hover {
+    background: var(--button-hover);
+}
+
+/* 定义移动端搜索框样式 */
+.mobile-menu .search-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 定义移动端自动补全列表样式 */
+.mobile-menu .autocomplete-list {
+    width: 100%;
+    left: 0;
+    top: auto;
+}
+
+/* 定义响应式导航：小屏幕（最大宽度768px） */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    .nav-links {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .mobile-menu.active {
+        display: block;
+        animation: slideDown 0.3s ease-in-out;
+    }
+    @keyframes slideDown {
+        from { transform: translateY(-10%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    .hero {
+        padding: 3rem 1rem;
+        margin: 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .portfolio,
+    .features,
+    .services,
+    .about,
+    .recruit,
+    .contact {
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .portfolio-grid,
+    .team-grid,
+    .case-grid,
+    .job-list {
+        grid-template-columns: 1fr;
+        gap: 9rem;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    .portfolio-item,
+    .team-member,
+    .case-item,
+    .job-item {
+        height: auto;
+        min-height: 300px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .portfolio-item h3,
+    .team-member h3,
+    .case-item h3,
+    .job-item h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .card-front,
+    .card-back {
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .card-front p,
+    .card-back p {
+        font-size: 0.9rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .portfolio-item:hover .card-front,
+    .team-member:hover .card-front,
+    .case-item:hover .card-front,
+    .job-item:hover .card-front {
+        transform: none;
+    }
+    .portfolio-item:hover .card-back,
+    .team-member:hover .card-back,
+    .case-item:hover .card-back,
+    .job-item:hover .card-back {
+        transform: none;
+    }
+    .card-back {
+        display: none;
+    }
+    .portfolio-item img,
+    .team-member img,
+    .case-item img,
+    .job-item img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .controls select,
+    .filter-controls select {
+        width: 100%;
+        max-width: 200px;
+        font-size: 0.9rem;
+    }
+    #back-to-top {
+        right: 15px;
+        bottom: 15px;
+        padding: 0.8rem;
+    }
+}
+
+/* 定义响应式导航：大屏幕（最小宽度769px） */
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav-links .theme-toggle {
+        background: var(--button-bg);
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+        font-size: 1rem;
+    }
+    .nav-links .theme-toggle:hover {
+        background: var(--button-hover);
+        transform: translateY(-2px);
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 9rem; /* 增大桌面端作品卡片间距 */
+    }
+}
+
+/* 定义主视觉区域样式 */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--card-bg);
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 定义主视觉区域标题样式 */
+.hero h1 {
+    font-size: 3.2rem;
+    color: var(--button-bg);
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in;
+}
+
+/* 定义主视觉区域段落样式 */
+.hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+/* 定义淡入动画 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 定义按钮样式（包括 cta、email、notify、copy 按钮） */
+.cta-button,
+.email-button,
+.notify-button,
+.copy-button {
+    background: var(--button-bg);
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 0.5rem;
+}
+
+/* 定义邮件按钮样式 */
+.email-button {
+    background: var(--email-button-bg);
+}
+
+/* 定义按钮悬停样式（cta、notify、copy 按钮） */
+.cta-button:hover,
+.notify-button:hover,
+.copy-button:hover {
+    background: var(--button-hover);
+    transform: translateY(-3px);
+}
+
+/* 定义邮件按钮悬停样式 */
+.email-button:hover {
+    background: var(--email-button-hover);
+}
+
+/* 定义控件区域样式（背景选择） */
+.controls {
+    margin: 1.5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    max-width: 800px;
+}
+
+/* 定义控件区域下拉框样式 */
+.controls select {
+    padding: 0.8rem;
+    border: 2px solid var(--button-bg);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    min-width: 150px;
+    z-index: 10;
+    position: relative;
+}
+
+/* 定义内容区域样式（作品、特色、服务、关于、招募、联系） */
+.portfolio,
+.features,
+.services,
+.about,
+.recruit,
+.contact {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 定义二级标题样式 */
+h2 {
+    font-size: 2.5rem;
+    color: var(--button-bg);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 定义网格布局样式（作品、团队、案例、职位） */
+.portfolio-grid,
+.team-grid,
+.case-grid,
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 9rem;
+}
+
+/* 定义卡片样式（作品、团队成员、案例、职位） */
+.portfolio-item,
+.team-member,
+.case-item,
+.job-item {
+    background: var(--card-bg);
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    height: 320px;
+    perspective: 1200px;
+    outline: none;
+}
+
+/* 定义卡片悬停和聚焦样式 */
+.portfolio-item:hover,
+.team-member:hover,
+.case-item:hover,
+.job-item:hover,
+.portfolio-item:focus,
+.team-member:focus,
+.case-item:focus,
+.job-item:focus {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    outline: 3px solid var(--button-bg);
+}
+
+/* 定义卡片标题样式 */
+.portfolio-item h3,
+.team-member h3,
+.case-item h3,
+.job-item h3 {
+    color: var(--button-bg);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* 定义卡片正面和背面样式 */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--card-bg);
+    border-radius: 12px;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1.8rem;
+}
+
+/* 定义卡片正面样式 */
+.card-front {
+    transform: rotateY(0deg);
+}
+
+/* 定义卡片背面样式 */
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* 定义卡片悬停时正面翻转样式 */
+.portfolio-item:hover .card-front,
+.team-member:hover .card-front,
+.case-item:hover .card-front,
+.job-item:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+/* 定义卡片悬停时背面翻转样式 */
+.portfolio-item:hover .card-back,
+.team-member:hover .card-back,
+.case-item:hover .card-back,
+.job-item:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* 定义特色和服务卡片样式 */
+.feature-card,
+.service-item {
+    background: var(--card-bg);
+    padding: 1.8rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+/* 定义特色和服务卡片悬停样式 */
+.feature-card:hover,
+.service-item:hover {
+    transform: translateY(-8px);
+}
+
+/* 定义特色和服务卡片标题样式 */
+.feature-card h3,
+.service-item h3 {
+    color: var(--button-bg);
+    font-size: 1.8rem;
+}
+
+/* 定义筛选控件区域样式 */
+.filter-controls {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* 定义筛选控件下拉框样式 */
+.filter-controls select {
+    padding: 0.8rem 1.2rem;
+    border: 2px solid var(--button-bg);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* 定义联系信息段落样式 */
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+}
+
+/* 定义可复制文本样式 */
+.copy-text {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* 定义可复制文本悬停样式 */
+.copy-text:hover {
+    color: var(--link-hover);
+}
+
+/* 定义返回顶部按钮样式 */
+#back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: var(--button-bg);
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+
+/* 定义返回顶部按钮显示样式 */
+#back-to-top.visible {
+    opacity: 1;
+}
+
+/* 定义返回顶部按钮悬停样式 */
+#back-to-top:hover {
+    background: var(--button-hover);
+    transform: translateY(-5px);
+}
+
+/* 定义页脚样式 */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--header-bg);
+    margin-top: 3rem;
+    font-size: 1.1rem;
+}
+
+/* 定义星星效果容器样式 */
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 定义星星样式 */
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* 定义流星样式 */
+.meteor {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: rotate(-45deg);
+    pointer-events: none;
+    z-index: 0;
+    animation: meteor linear forwards;
+}
+
+/* 定义流星动画 */
+@keyframes meteor {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(800px, 800px) rotate(-45deg);
+    }
+}
+
+/* 定义小屏幕（最大宽度768px）样式 */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+}
+
+/* 定义愿景段落居中样式 */
+.vision-paragraph {
+    text-align: center;
+}
