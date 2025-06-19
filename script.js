@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundSelect = document.getElementById('background-theme');
     // 如果背景选择框存在
     if (backgroundSelect) {
-        // 从本地存储获取保存的背景主题，默认为 'rainbow'
-        const savedBackground = localStorage.getItem('background') || 'rainbow';
+        // 从本地存储获取保存的背景主题，默认为 'starry'
+        const savedBackground = localStorage.getItem('background') || 'starry';
         // 设置页面 body 的类名为保存的背景主题
         document.body.className = savedBackground;
         // 如果保存的主题是暗黑模式，添加 'dark-mode' 类
@@ -125,18 +125,18 @@ document.addEventListener('DOMContentLoaded', () => {
         counter.textContent = visits;
     }
 
-    // 搜索功能数据
+    // 搜索功能数据【新增定位功能：为每项添加 anchor 属性】
     const searchData = [
-        { title: '网站开发', category: '服务', page: 'services.html', description: '从静态网站到复杂的动态应用，我们提供全栈开发服务。' },
-        { title: 'UI/UX设计', category: '服务', page: 'services.html', description: '设计直观、吸引人的用户界面，提升用户体验。' },
-        { title: '品牌策划', category: '服务', page: 'services.html', description: '通过视觉设计和内容策略，塑造独特的品牌形象。' },
-        { title: '数字营销', category: '服务', page: 'services.html', description: '通过SEO、社交媒体和广告，提升您的在线影响力。' },
-        { title: '前端开发工程师', category: '职位', page: 'recruit.html', description: '精通HTML、CSS、JavaScript，熟悉React或Vue。' },
-        { title: 'UI/UX设计师', category: '职位', page: 'recruit.html', description: '熟练使用Figma或Adobe XD，有交互设计经验。' },
-        { title: '品牌策划专员', category: '职位', page: 'recruit.html', description: '优秀的文案能力和品牌策略经验。' },
-        { title: '寒露1726', category: '团队成员', page: 'about.html', description: '创始人，程序员，建模师，拥有丰富的编程和3D建模经验。' },
-        { title: 'Innefews', category: '团队成员', page: 'about.html', description: '创始人，副负责人，擅长项目管理和创意策划。' },
-        { title: '琪露诺', category: '团队成员', page: 'about.html', description: '成员，擅长创意设计。' },
+        { title: '网站开发', category: '服务', page: 'services.html', description: '从静态网站到复杂的动态应用，我们提供全栈开发服务。', anchor: 'website-dev' },
+        { title: 'UI/UX设计', category: '服务', page: 'services.html', description: '设计直观、吸引人的用户界面，提升用户体验。', anchor: 'ui-ux-design' },
+        { title: '品牌策划', category: '服务', page: 'services.html', description: '通过视觉设计和内容策略，塑造独特的品牌形象。', anchor: 'brand-planning' },
+        { title: '数字营销', category: '服务', page: 'services.html', description: '通过SEO、社交媒体和广告，提升您的在线影响力。', anchor: 'digital-marketing' },
+        { title: '前端开发工程师', category: '职位', page: 'recruit.html', description: '精通HTML、CSS、JavaScript，熟悉React或Vue。', anchor: 'frontend-dev' },
+        { title: 'UI/UX设计师', category: '职位', page: 'recruit.html', description: '熟练使用Figma或Adobe XD，有交互设计经验。', anchor: 'ui-ux-designer' },
+        { title: '品牌策划专员', category: '职位', page: 'recruit.html', description: '优秀的文案能力和品牌策略经验。', anchor: 'brand-planner' },
+        { title: '寒露1726', category: '团队成员', page: 'about.html', description: '创始人，程序员，建模师，拥有丰富的编程和3D建模经验。', anchor: 'hanlu1726' },
+        { title: 'Innefews', category: '团队成员', page: 'about.html', description: '创始人，副负责人，擅长项目管理和创意策划。', anchor: 'innefews' },
+        { title: '琪露诺', category: '团队成员', page: 'about.html', description: '成员，擅长创意设计。', anchor: 'cirno' },
     ];
 
     // 搜索框逻辑
@@ -175,7 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.addEventListener('touchstart', handleSelect);
 
                 function handleSelect() {
-                    window.location.href = result.page;
+                    // 【新增定位功能：跳转并定位到指定 anchor】
+                    if (result.anchor) {
+                        window.location.href = `${result.page}#${result.anchor}`;
+                    } else {
+                        window.location.href = result.page;
+                    }
                     input.value = result.title;
                     autocompleteList.style.display = 'none';
                 }
@@ -198,7 +203,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.description.toLowerCase().includes(input.value.trim().toLowerCase())
                 );
                 if (firstResult) {
-                    window.location.href = firstResult.page;
+                    // 【新增定位功能：回车跳转并定位】
+                    if (firstResult.anchor) {
+                        window.location.href = `${firstResult.page}#${firstResult.anchor}`;
+                    } else {
+                        window.location.href = firstResult.page;
+                    }
                     autocompleteList.style.display = 'none';
                 }
             }
@@ -231,28 +241,68 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('starry')) {
         requestAnimationFrame(animateStars);
     }
-});
 
-// 流星生成函数
-function createMeteor() {
-    // 仅在星空主题下生成流星
-    if (!document.body.classList.contains('starry')) return;
-
-    const starsContainer = document.getElementById('stars');
-    const meteor = document.createElement('div');
-    meteor.className = 'meteor';
-    // 随机生成起始位置（屏幕顶部，水平随机）
-    meteor.style.left = `${Math.random() * 100}%`;
-    meteor.style.top = `-${Math.random() * 20}px`; // 从屏幕顶部上方开始
-    // 随机动画持续时间
-    meteor.style.animationDuration = `${2 + Math.random() * 2}s`; // 2s 到 4s
-    starsContainer.appendChild(meteor);
-
-    // 动画结束后移除流星
-    meteor.addEventListener('animationend', () => {
-        meteor.remove();
+    // 图片懒加载逻辑,示例：<img data-src="path/to/image.jpg" alt="描述">
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '0px 0px 200px 0px', // 提前 200px 开始加载
+        threshold: 0.1
     });
-}
 
-// 每隔 300ms 生成流星，增加流星数量
-setInterval(createMeteor, 300);
+    lazyImages.forEach(img => imageObserver.observe(img));
+
+    // 流星生成函数
+    function createMeteor() {
+        // 仅在星空主题下生成流星
+        if (!document.body.classList.contains('starry')) return;
+
+        const starsContainer = document.getElementById('stars');
+        const meteor = document.createElement('div');
+        meteor.className = 'meteor';
+        // 随机生成起始位置（屏幕顶部，水平随机）
+        meteor.style.left = `${Math.random() * 100}%`;
+        meteor.style.top = `-${Math.random() * 20}px`; // 从屏幕顶部上方开始
+        // 随机动画持续时间
+        meteor.style.animationDuration = `${2 + Math.random() * 2}s`; // 2s 到 4s
+        starsContainer.appendChild(meteor);
+
+        // 动画结束后移除流星
+        meteor.addEventListener('animationend', () => {
+            meteor.remove();
+        });
+    }
+
+    // 每隔 300ms 生成流星，增加流星数量
+    setInterval(createMeteor, 300);
+
+    // 动态进度条逻辑
+    // 创建进度条容器和进度条元素
+    const progressContainer = document.createElement('div');
+    progressContainer.className = 'progress-container';
+    const progressBar = document.createElement('div');
+    progressBar.className = 'progress-bar';
+    progressContainer.appendChild(progressBar);
+    document.body.prepend(progressContainer);
+
+    // 更新进度条宽度
+    function updateProgressBar() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+
+    // 监听滚动事件
+    window.addEventListener('scroll', updateProgressBar);
+    // 页面加载时初始化进度条
+    updateProgressBar();
+});
