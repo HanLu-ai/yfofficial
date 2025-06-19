@@ -22,12 +22,12 @@ body.dark-mode {
     --header-bg: rgba(50, 50, 50, 0.95);
     --button-bg: #1714c9;
     --button-hover: #1714c9;
-    --email-button-bg: #ffcc00;
-    --email-button-hover: #cc9900;
+    --email-button-bg: #1714c9;
+    --email-button-hover: #1714c9;
     --link-color: #e0e0e0;
     --link-hover: #1714c9;
     --search-bg: rgba(50, 50, 50, 0.9);
-    --search-border: #ffcc00;
+    --search-border: #1714c9;
     --autocomplete-bg: rgba(50, 50, 50, 0.95);
     --autocomplete-hover: #666;
 }
@@ -634,6 +634,7 @@ nav {
 /* 定义邮件按钮悬停样式 */
 .email-button:hover {
     background: var(--email-button-hover);
+    transform: translateY(-3px);
 }
 
 /* 定义控件区域样式（背景选择） */
@@ -922,4 +923,32 @@ footer {
 /* 定义愿景段落居中样式 */
 .vision-paragraph {
     text-align: center;
+}
+
+/* 定义进度条容器样式 */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: transparent;
+    z-index: 1100; /* 确保在 header 之上 */
+}
+
+/* 定义进度条样式 */
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6f61, #ffb400, #00ff87, #00b7eb, #ff69b4, #ff6f61);
+    background-size: 600% 600%;
+    animation: rainbow 15s ease infinite;
+    transition: width 0.3s ease;
+}
+
+/* 定义暗黑模式下的进度条样式 */
+body.dark-mode .progress-bar {
+    background: linear-gradient(90deg, #4a2e2e, #4a3c00, #004d2e, #00384a, #4a2e4a, #4a2e2e);
+    background-size: 600% 600%;
+    animation: rainbow 15s ease infinite;
 }
