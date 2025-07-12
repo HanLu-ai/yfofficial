@@ -1,0 +1,9 @@
+s="学Python，大家一起在努力！"
+print("字符串\""+s+"\"的长度为:"+str(len(s)))
+print(s[1:10:2])
+print(s[1:10])
+print(s[:])
+print(s[:5])
+print(s[4::])
+print("start_index>end_index"+s[4:1])
+print("start_index==end_index"+s[4:4])
