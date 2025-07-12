@@ -953,7 +953,6 @@ body.dark-mode .progress-bar {
     animation: rainbow 15s ease infinite;
 }
 
-.feature-card a {
+.feature-card a{
     text-decoration: none;
-    color: var(--button-bg);
 }
