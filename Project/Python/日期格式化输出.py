@@ -1,0 +1,14 @@
+print("本程序由御风工作室编写。")
+a=input()
+b=input()
+c=input()
+print(a,b,c)
+s1=a+"-"+b+"-"+c
+print(s1)
+s2=a+"/"+b+"/"+c
+print(s2)
+s3=b+","+c+","+a
+print(s3)
+print("{0}年{1}月{2}日".format(a,b,c))
+s4=a+"年"+b+"月"+c+"日"
+print(s4)
