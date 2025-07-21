@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>联系我们-御风工作室</title>
+        <link rel="stylesheet" href="../../css/styles.css">
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
+        <script type="module" src="../../js/firebase-config.js"></script>
+        <script src="../../js/script.js"></script>
+        <link rel="shortcut icon" href="../../picture/yfstudio.ico" />
+    </head>
+    <body class="starry">
+        <header>
+            <nav>
+                <div class="logo"><a href="log.html">御风工作室</a></div>
+                <img src="../../picture/御风工作室.jpg" width="200" height="123" alt="御风工作室">
+                <button type="button" class="menu-toggle">☰</button>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html">服务介绍</a></li>
+                    <li><a href="recruit.html">人员招募</a></li>
+                    <li><a href="contact.html" class="active">联系我们</a></li>
+                    <li><a href="resource.html">资源共享</a></li>
+                    <li><a href="works.html">成果展示</a></li>
+                    <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
+                    <li>
+                        <input type="text" class="search-input" placeholder="搜索...">
+                        <ul class="autocomplete-list"></ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="../../index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html">服务介绍</a></li>
+                    <li><a href="recruit.html">人员招募</a></li>
+                    <li><a href="contact.html" class="active">联系我们</a></li>
+                    <li><a href="resource.html">资源共享</a></li>
+                    <li><a href="works.html">成果展示</a></li>
+                    <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
+                    <li>
+                        <input type="text" class="search-input" placeholder="搜索...">
+                        <ul class="autocomplete-list"></ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>联系我们</h1>
+            <p>有任何问题或合作意向？请随时与我们联系！</p>
+        </section>
+
+        <div class="controls">
+            <div class="feature-card">
+                <label for="background-theme">请选择一个主题：</label>
+                <select id="background-theme">
+                    <option value="rainbow">彩虹渐变</option>
+                    <option value="starry">星空</option>
+                    <option value="waves">波浪</option>
+                    <option value="aurora">极光</option>
+                    <option value="sunset">日落</option>
+                    <option value="forest">森林</option>
+                </select>
+            </div>
+        </div>
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-card">
+                    <section class="contact">
+                        <div class="contact-info">
+                            <p>邮箱: <span class="copy-text">1454055041@qq.com</span></p>
+                            <p>电话: <span class="copy-text">+86 13605235198</span></p>
+                            <p>地址: 中国江苏省徐州市</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        
+
+        <button type="button" id="back-to-top">↑</button>
+
+        <footer>
+            <p>© 2025 <a href="log.html">御风工作室</a> 保留所有权利。</p>
+        </footer>
+    </body>
+</html>

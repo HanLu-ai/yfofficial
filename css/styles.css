@@ -223,6 +223,7 @@ body.dark-mode.forest {
 /* 定义页眉样式 */
 header {
     background: var(--header-bg);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -337,11 +338,10 @@ nav {
     background: var(--button-hover);
 }
 
-/* 定义移动端菜单样式 */
 .mobile-menu {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 60px; /* 保持不变，但确保 header 的高度足够 */
     left: 0;
     width: 100%;
     background: var(--header-bg);
@@ -794,7 +794,7 @@ h2 {
 /* 定义特色和服务卡片标题样式 */
 .feature-card h3,
 .service-item h3 {
-    color: var(--button-bg);
+    color: #1714c9;
     font-size: 1.8rem;
 }
 
@@ -955,4 +955,13 @@ body.dark-mode .progress-bar {
 
 .feature-card a{
     text-decoration: none;
+}
+
+a{
+    color: #1714c9;
+    text-decoration: none;
+}
+
+#version-log h3{
+    text-align: center;
 }

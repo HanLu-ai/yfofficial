@@ -61,11 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 移动端菜单切换
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+            const header = document.querySelector('header');
+            const headerHeight = header.offsetHeight;
+            mobileMenu.style.top = `${headerHeight}px`;
+            mobileMenu.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+        }
     });
 
     // 获取背景主题选择下拉框
@@ -305,6 +310,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: '9.选择其中一部手机，将（手机价格，手机品牌）两个信息选择不同类型的变量，随后打印出来.zip', category: 'Java项目示例', page: '/html/resource/Java.html', description: '9.选择其中一部手机，将（手机价格，手机品牌）两个信息选择不同类型的变量，随后打印出来.zip', anchor: 'phone info variables'},
         { title: '10.键盘录入.zip', category: 'Java项目示例', page: '/html/resource/Java.html', description: '10.键盘录入.zip', anchor: 'keyboard input'},
         { title: '11.算数运算符.zip', category: 'Java项目示例', page: '/html/resource/Java.html', description: '11.算数运算符.zip', anchor: 'arithmetic operators'},
+
+        { title: '1.双开门.zip', category: 'HTML项目示例', page: '/html/resource/HTML plus CSS plus Mobile Web.html', description: '1.双开门.zip', anchor: 'double doors'},
+
+        { title: '沙二M4A4中路五杀', category: 'CS2', page: '/html/works/Hanlu1726 works/CS2/CS2.html', description: '沙二M4A4中路五杀', anchor: 'Dust2 M4A4 Mid Five Kill'},
+        { title: '假日希腊控场', category: 'CS2', page: '/html/works/Hanlu1726 works/CS2/CS2.html', description: '假日希腊控场', anchor: 'Holiday Greece Control'},
+
+        { title: '这就是我与欧申纳斯的羁绊', category: '深空之眼', page: '/html/works/Hanlu1726 works/Eyes of the Depths/Eyes of the Depths.html', description: '这就是我与欧申纳斯的羁绊', anchor: 'This is my bond with Oshenus'},
     ];
 
     // 搜索框逻辑
@@ -495,4 +507,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // 页面加载时初始化进度条
     updateProgressBar();
     }); // <-- 补充 forEach 的闭合括号
+});
+
+// 移动端菜单外部点击关闭
+document.addEventListener('click', (e) => {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (mobileMenu.classList.contains('active') && 
+        !mobileMenu.contains(e.target) && 
+        !menuToggle.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+    }
 });

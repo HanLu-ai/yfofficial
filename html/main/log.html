@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新日志-御风工作室</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
+    <script type="module" src="../../js/firebase-config.js"></script>
+    <script src="../../js/script.js"></script>
+    <link rel="shortcut icon" href="../../picture/yfstudio.ico" />
+</head>
+<body class="starry">
+    <header>
+        <nav>
+            <div class="logo"><a href="log.html">御风工作室</a></div>
+            <img src="../../picture/御风工作室.jpg" width="200" height="123" alt="御风工作室">
+            <button class="menu-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="services.html">服务介绍</a></li>
+                <li><a href="recruit.html">人员招募</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="resource.html">资源共享</a></li>
+                <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
+                <li>
+                    <input type="text" class="search-input" placeholder="搜索...">
+                    <ul class="autocomplete-list"></ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="services.html">服务介绍</a></li>
+                <li><a href="recruit.html">人员招募</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="resource.html">资源共享</a></li>
+                <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
+                <li>
+                    <input type="text" class="search-input" placeholder="搜索...">
+                    <ul class="autocomplete-list"></ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>御风工作室日志</h1>
+        <p>查看我们的更新日志，共同进步</p>
+    </section>
+    <div class="controls">
+        <label for="background-theme">请选择一个主题：</label>
+        <select id="background-theme">
+            <option value="rainbow">彩虹渐变</option>
+            <option value="starry">星空</option>
+            <option value="waves">波浪</option>
+            <option value="aurora">极光</option>
+            <option value="sunset">日落</option>
+            <option value="forest">森林</option>
+        </select>
+    </div>
+
+    <section class="features">
+        <div class="feature-card" id="version-log">
+            <h3>版本记录</h3>
+            <div class="feature-card">
+                <h3>御风工作室官网0.5.2版本（2025，7.16）</h3>
+                <p>
+                    1.新增了成果展示、寒露作品、Innefews作品等页面；<br>
+                    2.优化了所有页面的UI；<br>
+                    3.优化了移动端适配；<br>
+                    4.修复了海量的Bug；<br>
+                    5.优化了移动端导航栏；<br>
+                    6.优化了移动端适配；<br>
+                    7.优化了搜索功能；<br>
+                    8.优化了模糊搜索功能；<br>
+                    9.优化了模糊搜索定位功能；<br>
+                    10.优化了模糊搜索提示功能；<br>
+                    11.优化了模糊搜索跳转功能；<br>
+                    12.优化了模糊搜索精准定位功能；<br>
+                    13.优化了代码结构；
+                    14.优化了代码逻辑；<br>
+                    15.优化了所有页面的样式和JavaScript逻辑；
+                    16.优化了移动端适配；<br>
+                    17.优化了文件路径。<br>
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.5.1版本（2020.7.16）</h3>
+                <p>
+                    -紧急修复URL解析错误
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.5.0版本（2025.7.16）</h3>
+                <p>
+                    1.新增HTML + CSS + 移动端网页页面；<br>
+                    2.新增2个HTML + CSS + 移动端网页实例（可下载和在线预览效果）；<br>
+                    3.新增2个跳转项目库；<br>
+                    4.优化了部分UI；<br>
+                    5.优化了标题内容；<br>
+                    6.优化了代码结构；<br>
+                    7.优化了移动端适配。
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.4.3版本（2025.7.15）</h3>
+                <p>-优化了所有页面的UI</p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.4.2版本（2025.7.13）</h3>
+                <p>
+                    1.紧急修复部分文字错误；<br>
+                    2.紧急修复了配置Bug；<br>
+                    3.紧急优化了样式。
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.4.1版本（2025.7.13）</h3>
+                <p>
+                    1.新增日志页面（点击导航栏的“御风工作室”或者页面底部的“御风工作室”即可访问）；<br>
+                    2.新增日志页面的版本更新记录；<br>
+                    3.优化了所有页面；<br>
+                    4.删除了一个样式测试页面。
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.4.0版本（2025.7.12）</h3>
+                <p>
+                    1.新增资源共享、Python、C++和Java页面；<br>
+                    2.新增94种Python实例（可下载和在线查看）；<br>
+                    3.新增58种C++实例（可下载）；<br>
+                    4.新增11种Java实例（可下载）；<br>
+                    5.新增所有实例名字的搜索定位，可以直接搜索名字找到实例；<br>
+                    6.新增了御风工作室图标于导航栏；<br>
+                    7.优化模糊搜索定位功能，现在可以定位的更加精准；<br>
+                    8.优化了项目路径；<br>
+                    9.优化了代码结构；<br>
+                    10.优化了页面样式；<br>
+                    11.优化了部分UI；<br>
+                    12.优化了移动端导航栏。<br>
+                    <br>
+                    本来昨天就更新好了，但是实在太累了就拖到了今天（2025.7.13）。这次没有Bug，所以也就没有修Bug。<br>
+                    由于github对文件总是解析错误，但我在VSC和firebase上预览和部署均没有任何问题，故不再在github上更新，此后只在https://yf-studio.web.app上更新，感谢体谅。
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.3.0版本（2025.6.24）</h3>
+                <p>
+                    1.优化了全局样式；<br>
+                    2.新增模糊搜索精准定位功能；<br>
+                    3.新增动态彩虹进度条；<br>
+                    4.修复“联系我们”样式故障；<br>
+                    5.默认主题更改为星空；<br>
+                    6.新增懒加载功能。
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.3.0-preview.1版本（2025.6.18）</h3>
+                <p>
+                    1.优化了全局样式；<br>
+                    2.新增模糊搜索精准定位功能；<br>
+                    3.新增动态彩虹进度条；<br>
+                    4.修复“联系我们”样式故障；<br>
+                    5.默认主题更改为星空；<br>
+                    6.新增懒加载功能。
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.2.0版本（2025.6.18）</h3>
+                <p> 
+                    1.优化了部分页面样式表和全局样式；<br>
+                    2.新增跨网页模糊搜索功能；<br>
+                    3.新增模糊搜索提示功能和跳转功能；<br>
+                    4.修复已知BUG。<br>
+                    下次更新计划：<br>
+                    让模糊搜索的定位更精确（最迟2025.7.5完成）
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.1.3版本（2025.6.17）</h3>
+                <p> 1.优化了所有页面的css形式和JavaScript逻辑；<br>
+                    2.优化了移动端适配，修复了元素溢出问题。
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>御风工作室官网0.1.2版本（2025.6.16）</h3>
+                <p> 
+                    1.修复了某些主题无法切换的问题；<br>
+                    2.删除了部分冗余功能；<br>
+                    3.删除了所有表单内容；<br>
+                    4.优化了css形式和JavaScript逻辑；<br>
+                    5.新增了一个工作室成员作为测试；<br>
+                    6.优化了移动端适配。<br>
+                    目前已知问题：<br>
+                    手机端适配中，部分元素溢出，预计最迟2025.7.5解决
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+
+    <button type="button" id="back-to-top">↑</button>
+
+    <footer>
+        <p>© 2025 <a href="log.html">御风工作室</a> 保留所有权利。</p>
+    </footer>
+</body>
+</html>

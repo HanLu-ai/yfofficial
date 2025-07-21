@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
-<html lang="zh-cn">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java资源中心-御风工作室</title>
+    <title>HTML资源中心-御风工作室</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
-    <script type="module" src="../../js/firebase-config.js"></script>
+    <script type="module" src="firebase-config.js"></script>
     <script src="../../js/script.js"></script>
     <link rel="shortcut icon" href="../../picture/yfstudio.ico" />
 </head>
@@ -16,7 +16,7 @@
         <nav>
             <div class="logo"><a href="../main/log.html">御风工作室</a></div>
             <img src="../../picture/御风工作室.jpg" width="200" height="123" alt="御风工作室 logo">
-            <button type="button" class="menu-toggle">☰</button>
+            <button class="menu-toggle">☰</button>
             <ul class="nav-links">
                 <li><a href="../../index.html">首页</a></li>
                 <li><a href="../main/about.html">关于我们</a></li>
@@ -24,7 +24,7 @@
                 <li><a href="../main/recruit.html">人员招募</a></li>
                 <li><a href="../main/contact.html">联系我们</a></li>
                 <li><a href="../main/resource.html" class="active">资源共享</a></li>
-                <li><button class="theme-toggle">切换黑夜模式</button></li>
+                <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
                 <li>
                     <input type="text" class="search-input" placeholder="搜索...">
                     <ul class="autocomplete-list"></ul>
@@ -66,45 +66,23 @@
     </div>
     <section class="features">
         <div class="feature-card">
-            <h2>Java共享资源</h2>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/helloworld.zip" id="hello world program">1.HelloWorld程序.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/Demo.zip" id="literals">2.字面量.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/Commonly used data types.zip" id="common data types">3.常用的数据类型.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/Considerationsforvariables.zip" id="variable considerations">4.变量的注意事项.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/Exercisesforvariables.zip" id="bus">5.公交车.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/Define8basicdatatypevariables.zip" id="define 8 basic data types">6.定义8种基本数据类型变量.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/Teachersnformation.zip" id="define 5 variables for teacher info">7.定义5个变量记录老师的信息并打印.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/VariableTest2.zip" id="movie info variables">8.将（电影名称，主演，年份，评分）四个信息选择不同类型的变量，随后打印出来.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/VariableTest3.zip" id="phone info variables">9.选择其中一部手机，将（手机价格，手机品牌）两个信息选择不同类型的变量，随后打印出来.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/ScannerDemo.zip" id="keyboard input">10.键盘录入.zip</a></h3>
-            </div>
-            <div class="feature-card">
-                <h3><a href="../../Project/Java/ArithmeticOperators.zip" id="arithmetic operators">11.算数运算符.zip</a></h3>
-            </div>
+            <h3>注意：下面的大标题为可下载的HTML代码文件</h3>
+            <p>下面的文本为可在线查看代码预览页面</p>
         </div>
     </section>
-
-    <button id="back-to-top">↑</button>
-
+    <section class="features">
+        <div class="feature-card">
+            <h2>HTML共享资源</h2>
+            <div class="feature-card">
+                <h3><a href="../../Project/HTML/double doors/双开门.zip" id="double doors">1.双开门.zip</a></h3>
+                <p><a href="../../Project/HTML/double doors/index.html">双开门</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/HTML/clouck/时钟.zip" id="clouck">2.时钟.zip</a></h3>
+                <p><a href="../../Project/HTML/clouck/index.html">时钟</a></p>
+        </div>
+    </section>
+    <button type="button" id="back-to-top">↑</button>
     <footer>
         <p>© 2025 <a href="../main/log.html">御风工作室</a> 保留所有权利。</p>
     </footer>

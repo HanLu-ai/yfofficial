@@ -1,21 +1,20 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>御风工作室</title>
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../../css/styles.css">
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
-        <script type="module" src="firebase-config.js"></script>
-        <script src="../js/script.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="shortcut icon" href="../picture/yfstudio.ico" />
+        <script type="module" src="../../js/firebase-config.js"></script>
+        <script src="../../js/script.js"></script>
+        <link rel="shortcut icon" href="../../picture/yfstudio.ico" />
     </head>
-    <body class="rainbow">
+    <body class="starry">
         <header>
             <nav>
-                <div class="logo">御风工作室</div>
+                <div class="logo"><a href="log.html">御风工作室</a></div>
                 <img src="../picture/御风工作室.jpg" width="200" height="123" alt="御风工作室">
                 <button class="menu-toggle">☰</button>
                 <ul class="nav-links">
@@ -25,7 +24,7 @@
                     <li><a href="recruit.html">人员招募</a></li>
                     <li><a href="contact.html">联系我们</a></li>
                     <li><a href="resource.html" class="active">资源共享</a></li>
-                    <li><button class="theme-toggle">切换黑夜模式</button></li>
+                    <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
                     <li>
                         <input type="text" class="search-input" placeholder="搜索...">
                         <ul class="autocomplete-list"></ul>
@@ -40,7 +39,7 @@
                     <li><a href="recruit.html">人员招募</a></li>
                     <li><a href="contact.html">联系我们</a></li>
                     <li><a href="resource.html" class="active">资源共享</a></li>
-                    <li><button class="theme-toggle">切换黑夜模式</button></li>
+                    <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
                     <li>
                         <input type="text" class="search-input" placeholder="搜索...">
                         <ul class="autocomplete-list"></ul>
@@ -53,6 +52,7 @@
             <p>欢迎使用御风工作室教程，下载我们的共享资源</p>
         </section>
         <div class="controls">
+            <label for="background-theme">请选择一个主题：</label>
             <select id="background-theme">
                 <option value="rainbow">彩虹渐变</option>
                 <option value="starry">星空</option>
@@ -63,25 +63,30 @@
             </select>
         </div>
         <section class="features">
-            <h2>共享资源</h2>
             <div class="feature-card">
-                <h3><a href="resource/Python.html">Python</a></h3>
-                <p> </p>
-            </div>
-            <div class="feature-card">
-                <h3><a href="resource/C plus plus.html">C++</a></h3>
-                <p> </p>
-            </div>
-            <div class="feature-card">
-                <h3><a href="resource/Java.html">Java</a></h3>
-                <p> </p>
+                <h2>共享资源</h2>
+                <div class="feature-card">
+                    <h3><a href="./resource/Python.html">Python</a></h3>
+                    <p> </p>
+                </div>
+                <div class="feature-card">
+                    <h3><a href="./resource/C plus plus.html">C++</a></h3>
+                    <p> </p>
+                </div>
+                <div class="feature-card">
+                    <h3><a href="./resource/Java.html">Java</a></h3>
+                    <p> </p>
+                </div>
+                <div class="feature-card">
+                    <h3><a href="./resource/HTML plus CSS plus Mobile Web.html">HTML + CSS + Mobile Web</a></h3>
+                </div>
             </div>
         </section>
 
-        <button id="back-to-top">↑</button>
+        <button type="button" id="back-to-top">↑</button>
 
         <footer>
-            <p>© 2025 御风工作室. 保留所有权利。</p>
+            <p>© 2025 <a href="log.html">御风工作室</a> 保留所有权利。</p>
         </footer>
     </body>
 </html>

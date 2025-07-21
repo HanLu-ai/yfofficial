@@ -1,0 +1,39 @@
+/* 作用于页面中的所有 HTML元素 */
+* {
+    /* margin: 0;：将所有元素的外边距（margin）设置为 0，消除浏览器默认的外边距 */
+    margin: 0;
+    /* padding: 0;：将所有元素的内边距（padding）设置为 0，消除浏览器默认的内边距 */
+    padding: 0;
+}
+
+/* 1. 布局：父子结构，父级是大图，子级是小图 */
+.father {
+    /* display: flex;：
+        将 .father 元素设置为 Flex 布局（弹性布局）。
+        这意味着它的直接子元素会按照 Flex 布局规则排列（例如水平或垂直排列，具体取决于其他 Flex 属性）。
+        Flex 布局常用于创建灵活的、响应式的布局。 */
+    display: flex;
+    /* margin: 20px;：
+        为 .father 元素设置 20 像素的外边距，在所有方向（上、右、下、左）都留出 20 像素的空白。 */
+    margin: 20px;
+    /* width: 1366px;：
+        设置 .father 元素的宽度为 1366 像素，这是一个固定的宽度，可能与常见的屏幕分辨率（如笔记本屏幕）相关。 */
+    width: 1366px;
+    /* height: 600px;：
+        设置 .father 元素的高度为 600 像素，也是固定高度。 */
+    height: 600px;
+    /* background-image: url(1681358110583.png);：
+        为 .father 元素设置背景图片，图片文件名为 1681358110583.png。
+        图片路径是相对路径，假设图片位于与 CSS 文件相同的目录或正确配置的路径中。
+        背景图片会填充整个 .father 元素区域（默认平铺，除非设置其他背景属性）。 */
+    background-image: url(1681358110583.png);
+    /* overflow: hidden;：
+        如果 .father 元素的内容（例如子元素或背景图片）超出其定义的宽高（1366px × 600px），超出的部分将被隐藏，不会显示在容器外部。
+        这常用于控制布局，防止内容溢出导致页面显示异常。 */
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

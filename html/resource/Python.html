@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>御风工作室</title>
+    <title>Python资源中心-御风工作室</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
-    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="../../js/firebase-config.js"></script>
     <script src="../../js/script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="../../picture/yfstudio.ico" />
 </head>
 <body class="rainbow">
     <header>
         <nav>
-            <div class="logo">御风工作室</div>
+            <div class="logo"><a href="../main/log.html">御风工作室</a></div>
             <img src="../../picture/御风工作室.jpg" width="200" height="123" alt="御风工作室">
-            <button class="menu-toggle">☰</button>
+            <button type="button" class="menu-toggle">☰</button>
             <ul class="nav-links">
-                <li><a href="../index.html">首页</a></li>
-                <li><a href="../about.html">关于我们</a></li>
-                <li><a href="../services.html">服务介绍</a></li>
-                <li><a href="../recruit.html">人员招募</a></li>
-                <li><a href="../contact.html">联系我们</a></li>
-                <li><a href="../resource.html" class="active">资源共享</a></li>
-                <li><button class="theme-toggle">切换黑夜模式</button></li>
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="../main/about.html">关于我们</a></li>
+                <li><a href="../main/services.html">服务介绍</a></li>
+                <li><a href="../main/recruit.html">人员招募</a></li>
+                <li><a href="../main/contact.html">联系我们</a></li>
+                <li><a href="../main/resource.html" class="active">资源共享</a></li>
+                <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
                 <li>
                     <input type="text" class="search-input" placeholder="搜索...">
                     <ul class="autocomplete-list"></ul>
@@ -34,13 +33,13 @@
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li><a href="../index.html">首页</a></li>
-                <li><a href="../about.html">关于我们</a></li>
-                <li><a href="../services.html">服务介绍</a></li>
-                <li><a href="../recruit.html">人员招募</a></li>
-                <li><a href="../contact.html">联系我们</a></li>
-                <li><a href="../resource.html" class="active">资源共享</a></li>
-                <li><button class="theme-toggle">切换黑夜模式</button></li>
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="../main/about.html">关于我们</a></li>
+                <li><a href="../main/services.html">服务介绍</a></li>
+                <li><a href="../main/recruit.html">人员招募</a></li>
+                <li><a href="../main/contact.html">联系我们</a></li>
+                <li><a href="../main/resource.html" class="active">资源共享</a></li>
+                <li><button type="button" class="theme-toggle">切换黑夜模式</button></li>
                 <li>
                     <input type="text" class="search-input" placeholder="搜索...">
                     <ul class="autocomplete-list"></ul>
@@ -53,6 +52,7 @@
         <p>欢迎使用御风工作室教程，下载我们的共享资源</p>
     </section>
     <div class="controls">
+        <label for="background-theme">请选择一个背景：</label>
         <select id="background-theme">
             <option value="rainbow">彩虹渐变</option>
             <option value="starry">星空</option>
@@ -69,449 +69,450 @@
         </div>
     </section>
     <section class="features">
-        <h2>共享资源</h2>
         <div class="feature-card">
-            <h3><a href="../../Project/Python/求最小公倍数.py" download="求最小公倍数.py" id="py least common multiple">1.求最小公倍数.py</a></h3>
-            <p><a href="../../Project/Python/求最小公倍数.py"\>求最小公倍数</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/最高和最矮.py" download="最高和最矮.py" id="highest and lowest">2.最高和最矮.py</a></h3>
-            <p><a href="../../Project/Python/最高和最矮.py"\>最高和最矮</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/干支纪年.py" download="干支纪年.py" id="Chinese sexagenary cycle">3.干支纪年.py</a></h3>
-            <p><a href="../../Project/Python/干支纪年.py"\>干支纪年</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/判断正数负数还是零.py" download="判断正数负数还是零.py" id="judge positive negative or zero">4.判断正数负数还是零.py</a></h3>
-            <p><a href="../../Project/Python/判断正数负数还是零.py"\>判断正数负数还是零</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/反转三位数.py" download="反转三位数.py" id="reverse three digits">5.反转三位数.py</a></h3>
-            <p><a href="../../Project/Python/反转三位数.py"\>反转三位数</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/凯撒密码.py" download="凯撒密码.py" id="Ceasar cipher">6.凯撒密码.py</a></h3>
-            <p><a href="../../Project/Python/凯撒密码.py"\>凯撒密码</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求组合数.py" download="求组合数.py" id="combination">7.求组合数.py</a></h3>
-            <p><a href="../../Project/Python/求组合数.py"\>求组合数</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/判断BMI.py" download="判断BMI.py" id="judge BMI">8.判断BMI.py</a></h3>
-            <p><a href="../../Project/Python/判断BMI.py"\>判断BMI</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求阶乘和.py" download="求阶乘和.py" id="factorial sum">9.求阶乘和.py</a></h3>
-            <p><a href="../../Project/Python/求阶乘和.py"\>求阶乘和</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求pi的近似值.py" download="求pi的近似值.py" id="approximate pi">10.求pi的近似值.py</a></h3>
-            <p><a href="../../Project/Python/求pi的近似值.py"\>求pi的近似值</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/提高成绩.py" download="提高成绩.py" id="improve score">11.提高成绩.py</a></h3>
-            <p><a href="../../Project/Python/提高成绩.py"\>提高成绩</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/猜数.py" download="猜数.py" id="guess number">12.猜数.py</a></h3>
-            <p><a href="../../Project/Python/猜数.py"\>猜数</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/存钱旅游.py" download="存钱旅游.py" id="save money for travel">13.存钱旅游.py</a></h3>
-            <p><a href="../../Project/Python/存钱旅游.py"\>存钱旅游</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/尼拉坎特哈级数求π近似值.py" download="尼拉坎特哈级数求π近似值.py" id="Nilakantha series for Pi">14.尼拉坎特哈级数求π近似值.py</a></h3>
-            <p><a href="../../Project/Python/尼拉坎特哈级数求π近似值.py"\>尼拉坎特哈级数求π近似值</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求圆的周长和面积.py" download="求圆的周长和面积.py" id="circle circumference and area">15.求圆的周长和面积.py</a></h3>
-            <p><a href="../../Project/Python/求圆的周长和面积.py"\>求圆的周长和面积</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/打印矩形.py" download="打印矩形.py" id="print rectangle">16.打印矩形.py</a></h3>
-            <p><a href="../../Project/Python/打印矩形.py"\>打印矩形</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/三角形面积.py" download="三角形面积.py" id="triangle area">17.三角形面积.py</a></h3>
-            <p><a href="../../Project/Python/三角形面积.py"\>三角形面积</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/区间测速.py" download="区间测速.py" id="interval speed">18.区间测速.py</a></h3>
-            <p><a href="../../Project/Python/区间测速.py"\>区间测速</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/水仙花数.py" download="水仙花数.py" id="Narcissus number">19.水仙花数.py</a></h3>
-            <p><a href="../../Project/Python/水仙花数.py"\>水仙花数</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/输出1千到1万之间的素数.py" download="输出1千到1万之间的素数.py" id="output prime numbers between 1000 and 10000">20.输出1千到1万之间的素数.py</a></h3>
-            <p><a href="../../Project/Python/输出1千到1万之间的素数.py"\>输出1千到1万之间的素数</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/找出三个数中最大的数.py" download="找出三个数中最大的数.py" id="find the largest of three numbers">21.找出三个数中最大的数.py</a></h3>
-            <p><a href="../../Project/Python/找出三个数中最大的数.py"\>找出三个数中最大的数</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/打的计费.py" download="打的计费.py" id="taxi fare calculation">22.打的计费.py</a></h3>
-            <p><a href="../../Project/Python/打的计费.py"\>打的计费</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/计算1-2+3-4…+99-100的值.py" download="计算1-2+3-4…+99-100的值.py" id="calculate alternating sum">23.计算1-2+3-4…+99-100的值.py</a></h3>
-            <p><a href="../../Project/Python/计算1-2+3-4…+99-100的值.py"\>计算1-2+3-4…+99-100的值</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/麦粒.py" download="麦粒.py" id="wheat grains">24.麦粒.py</a></h3>
-            <p><a href="../../Project/Python/麦粒.py"\>麦粒</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/编码.py" download="编码.py" id="encoding">25.编码.py</a></h3>
-            <p><a href="../../Project/Python/编码.py"\>编码</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/极差.py" download="极差.py" id="range">26.极差.py</a></h3>
-            <p><a href="../../Project/Python/极差.py"\>极差</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/能力值.py" download="能力值.py" id="ability value">27.能力值.py</a></h3>
-            <p><a href="../../Project/Python/能力值.py"\>能力值</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/值班.py" download="值班.py" id="duty">28.值班.py</a></h3>
-            <p><a href="../../Project/Python/值班.py"\>值班</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/五角星.py" download="五角星.py" id="pentagram">29.五角星.py</a></h3>
-            <p><a href="../../Project/Python/五角星.py"\>五角星</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/八边形.py" download="八边形.py" id="octagon">30.八边形.py</a></h3>
-            <p><a href="../../Project/Python/八边形.py"\>八边形</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/八角图形.py" download="八角图形.py" id="octagonal shape">31.八角图形.py</a></h3>
-            <p><a href="../../Project/Python/八角图形.py"\>八角图形</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/圆的面积计算.py" download="圆的面积计算.py" id="circle area calculation">32.圆的面积计算.py</a></h3>
-            <p><a href="../../Project/Python/圆的面积计算.py"\>圆的面积计算</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/奥运五环.py" download="奥运五环.py" id="Olympic rings">33.奥运五环.py</a></h3>
-            <p><a href="../../Project/Python/奥运五环.py"\>奥运五环</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/输出学生信息.py" download="输出学生信息.py" id="output student information">34.输出学生信息.py</a></h3>
-            <p><a href="../../Project/Python/输出学生信息.py"\>输出学生信息</a></p>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/三角形周长和面积.py" download="三角形周长和面积.py" id="triangle perimeter and area">35.三角形周长和面积.py</a></h3>
-            <p><a href="../../Project/Python/三角形周长和面积.py"\>三角形周长和面积</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/正向索引和反向索引.py" download="正向索引和反向索引.py" id="forward and backward indexing">36.正向索引和反向索引.py</a></h3>
-            <p><a href="../../Project/Python/正向索引和反向索引.py"\>正向索引和反向索引</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/五星红旗.py" download="五星红旗.py" id="Five-star red flag">37.五星红旗.py</a></h3>
-            <p><a href="../../Project/Python/五星红旗.py"\>五星红旗</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/正向切片.py" download="正向切片.py" id="forward slicing">38.正向切片.py</a></h3>
-            <p><a href="../../Project/Python/正向切片.py"\>正向切片</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/存款利息.py" download="存款利息.py" id="deposit interest">39.存款利息.py</a></h3>
-            <p><a href="../../Project/Python/存款利息.py"\>存款利息</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/反向切片.py" download="反向切片.py" id="backward slicing">40.反向切片.py</a></h3>
-            <p><a href="../../Project/Python/反向切片.py"\>反向切片</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/藏头诗.py" download="藏头诗.py" id="acrostic poem">41.藏头诗.py</a></h3>
-            <p><a href="../../Project/Python/藏头诗.py"\>藏头诗</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/回文诗.py" download="回文诗.py" id="palindrome poem">42.回文诗.py</a></h3>
-            <p><a href="../../Project/Python/回文诗.py"\>回文诗</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/字符串压缩.py" download="字符串压缩.py" id="string compression">43.字符串压缩.py</a></h3>
-            <p><a href="../../Project/Python/字符串压缩.py"\>字符串压缩</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/手机号替换.py" download="手机号替换.py" id="phone number replacement">44.手机号替换.py</a></h3>
-            <p><a href="../../Project/Python/手机号替换.py"\>手机号替换</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/字符串拼接.py" download="字符串拼接.py" id="string concatenation">45.字符串拼接.py</a></h3>
-            <p><a href="../../Project/Python/字符串拼接.py"\>字符串拼接</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/身份证识别生日.py" download="身份证识别生日.py" id="ID card birthday recognition">46.身份证识别生日.py</a></h3>
-            <p><a href="../../Project/Python/身份证识别生日.py"\>身份证识别生日</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/月份缩写.py" download="月份缩写.py" id="month abbreviation">47.月份缩写.py</a></h3>
-            <p><a href="../../Project/Python/月份编写.py"\>月份编写</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/统计字符个数.py" download="统计字符个数.py" id="count characters">48.统计字符个数.py</a></h3>
-            <p><a href="../../Project/Python/统计字符个数.py"\>统计字符个数</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/飞行员报考资格.py" download="飞行员报考资格.py" id="pilot qualification">49.飞行员报考资格.py</a></h3>
-            <p><a href="../../Project/Python/飞行员报考资格.py"\>飞行员报考资格</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/学费计算.py" download="学费计算.py" id="tuition calculation">50.学费计算.py</a></h3>
-            <p><a href="../../Project/Python/学费计算.py"\>学费计算</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/成绩等级划分.py" download="成绩等级划分.py" id="grade classification">51.成绩等级划分.py</a></h3>
-            <p><a href="../../Project/Python/成绩等级划分.py"\>成绩等级划分</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/日期格式化输出.py" download="日期格式化输出.py" id="date formatting">52.日期格式化输出.py</a></h3>
-            <p><a href="../../Project/Python/日期格式化输出.py"\>日期格式化输出</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/整数四则运算及格式化输出.py" download="整数四则运算及格式化输出.py" id="integer arithmetic and formatting">53.整数四则运算及格式化输出.py</a></h3>
-            <p><a href="../../Project/Python/整数四则运算及格式化输出.py"\>整数四则运算及格式化输出</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/平方根格式化.py" download="平方根格式化.py" id="square root formatting">54.平方根格式化.py</a></h3>
-            <p><a href="../../Project/Python/平方根格式化.py"\>平方根格式化</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/模拟打印超市购物小票.py" download="模拟打印超市购物小票.py" id="supermarket receipt simulation">55.模拟打印超市购物小票.py</a></h3>
-            <p><a href="../../Project/Python/模拟打印超市购物小票.py"\>模拟打印超市购物小票</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/商店找钱给顾客.py" download="商店找钱给顾客.py" id="change for customer">56.商店找钱给顾客.py</a></h3>
-            <p><a href="../../Project/Python/商店找钱给顾客.py"\>商店找钱给顾客</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/每行一个数字输出 0 -（n-1）.py" download="每行一个数字输出 0 -（n-1）.py" id="output numbers from 0 to n-1">57.每行一个数字输出 0 -（n-1）.py</a></h3>
-            <p><a href="../../Project/Python/每行一个数字输出 0 -（n-1）.py"\>每行一个数字输出 0 -（n-1）</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个空格.py" download="在一行内输出 0 -（n-1），每个数字后输出一个空格.py" id="output numbers with spaces">58.在一行内输出 0 -（n-1），每个数字后输出一个空格.py</a></h3>
-            <p><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个空格.py"\>在一行内输出 0 -（n-1），每个数字后输出一个空格</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字间没有空格.py" download="在一行内输出 0 -（n-1），每个数字间没有空格.py" id="output numbers without spaces">59.在一行内输出 0 -（n-1），每个数字间没有空格.py</a></h3>
-            <p><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字间没有空格.py"\>在一行内输出 0 -（n-1），每个数字间没有空格</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个逗号.py" download="在一行内输出 0 -（n-1），每个数字后输出一个逗号.py" id="output numbers with commas">60.在一行内输出 0 -（n-1），每个数字后输出一个逗号.py</a></h3>
-            <p><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个逗号.py"\>在一行内输出 0 -（n-1），每个数字后输出一个逗号</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py" download="当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py" id="output numbers with conditional commas">61.当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py</a></h3>
-            <p><a href="../../Project/Python/当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py"\>当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/闰年判定.py" download="闰年判定.py" id="leap year determination">62.闰年判定.py</a></h3>
-            <p><a href="../../Project/Python/闰年判定.py"\>闰年判定</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/20以内奇数的积.py" download="20以内奇数的积.py" id="product of odd numbers under 20">63.20以内奇数的积.py</a></h3>
-            <p><a href="../../Project/Python/20以内奇数的积.py"\>20以内奇数的积</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/根据出生年份判断是否成年人.py" download="根据出生年份判断是否成年人.py" id="adult determination">64.根据出生年份判断是否成年人.py</a></h3>
-            <p><a href="../../Project/Python/根据出生年份判断是否成年人.py"\>根据出生年份判断是否成年人</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/两个整数升序排列并输出.py" download="两个整数升序排列并输出.py" id="sort two integers">65.两个整数升序排列并输出.py</a></h3>
-            <p><a href="../../Project/Python/两个整数升序排列并输出.py"\>两个整数升序排列并输出</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求两个数的较大者.py" download="求两个数的较大者.py" is="find larger of two numbers">66.求两个数的较大者.py</a></h3>
-            <p><a href="../../Project/Python/求两个数的较大者.py"\>求两个数的较大者</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/计算阶梯电价.py" download="计算阶梯电价.py" id="calculate tiered electricity price">67.计算阶梯电价.py</a></h3>
-            <p><a href="../../Project/Python/计算阶梯电价.py"\>计算阶梯电价</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/简易AQI.py" download="简易AQI.py" id="simple AQI">68.简易AQI.py</a></h3>
-            <p><a href="../../Project/Python/简易AQI.py"\>简易AQI</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/判断三角形是否成立并计算面积.py" download="判断三角形是否成立并计算面积.py" id="triangle validity and area">69.判断三角形是否成立并计算面积.py</a></h3>
-            <p><a href="../../Project/Python/判断三角形是否成立并计算面积.py"\>判断三角形是否成立并计算面积</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/简易版个税计算.py" download="简易版个税计算.py" id="simple income tax calculation">70.简易版个税计算.py</a></h3>
-            <p><a href="../../Project/Python/简易版个税计算.py"\>简易版个税计算</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求学生某门课的平均成绩.py" download="求学生某门课的平均成绩.py" id="average grade for a cours">71.求学生某门课的平均成绩.py</a></h3>
-            <p><a href="../../Project/Python/求学生某门课的平均成绩.py"\>求学生某门课的平均成绩</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/统计字符个数（新）.py" download="统计字符个数（新）.py" id="count characters new">72.统计字符个数（新）.py</a></h3>
-            <p><a href="../../Project/Python/统计字符个数（新）.py"\>统计字符个数（新）</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/加减乘除测试程序.py" download="加减乘除测试程序.py" id="arithmetic test program">73.加减乘除测试程序.py</a></h3>
-            <p><a href="../../Project/Python/加减乘除测试程序.py"\>加减乘除测试程序</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/剪刀石头布.py" download="剪刀石头布.py" id="rock paper scissors">74.剪刀石头布.py</a></h3>
-            <p><a href="../../Project/Python/剪刀石头布.py"\>剪刀石头布</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/Unicode编码方法以统计中文字符.py" download="Unicode编码方法以统计中文字符.py" id="Unicode encoding for Chinese characters">75.Unicode编码方法以统计中文字符.py</a></h3>
-            <p><a href="../../Project/Python/Unicode编码方法以统计中文字符.py"\>Unicode编码方法以统计中文字符</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/分数求和.py" download="分数求和.py" id="fraction sum">76.分数求和.py</a></h3>
-            <p><a href="../../Project/Python/分数求和.py"\>分数求和</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/1000以内的完数.py" download="1000以内的完数.py" id="product of odd numbers under 1000">77.1000以内奇数的积.py</a></h3>
-            <p><a href="../../Project/Python/1000以内的完数.py"\>1000以内的完数</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/输出上三角形九九乘法表.py" download="输出上三角形九九乘法表.py" id="upper triangular multiplication table">78.输出上三角形九九乘法表.py</a></h3>
-            <p><a href="../../Project/Python/输出上三角形九九乘法表.py"\>输出上三角形九九乘法表</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求n的阶乘.py" download="求n的阶乘.py" id="factorial of n">79.求n的阶乘.py</a></h3>
-            <p><a href="../../Project/Python/求n的阶乘.py"\>求n的阶乘</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/列出1~200范围内的所有素数，要求每行输出10个数.py" download="列出1~200范围内的所有素数，要求每行输出10个数.py" id="list primes from 1 to 200">80.列出1~200范围内的所有素数，要求每行输出10个数.py</a></h3>
-            <p><a href="../../Project/Python/列出1~200范围内的所有素数，要求每行输出10个数.py"\>列出1~200范围内的所有素数，要求每行输出10个数</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/百钱买百鸡.py" download="百钱买百鸡.py" id="hundred money hundred chickens">81.百钱买百鸡.py</a></h3>
-            <p><a href="../../Project/Python/百钱买百鸡.py"\>百钱买百鸡</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/斐波那契数列.py" download="斐波那契数列.py" id="Fibonacci sequence">82.斐波那契数列.py</a></h3>
-            <p><a href="../../Project/Python/斐波那契数列.py"\>最斐波那契数列</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/回文数.py" download="回文数.py" id="palindrome number">83.回文数.py</a></h3>
-            <p><a href="../../Project/Python/回文数.py"\>回文数</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/用户登录.py" download="用户登录.py" id="user login">84.用户登录.py</a></h3>
-            <p><a href="../../Project/Python/用户登录.py"\>用户登录</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/水仙花数（新）.py" download="水仙花数（新）.py" id="Narcissus number new">85.水仙花数（新）.py</a></h3>
-            <p><a href="../../Project/Python/水仙花数（新）.py"\>水仙花数（新）</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/元组统计天气.py" download="元组统计天气.py" id="tuple weather statistics">86.元组统计天气.py</a></h3>
-            <p><a href="../../Project/Python/元组统计天气.py"\>元组统计天气</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/学生成绩单.py" download="学生成绩单.py" id="student report card">87.学生成绩单.py</a></h3>
-            <p><a href="../../Project/Python/学生成绩单.py"\>学生成绩单</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/生成扑克牌.py" download="生成扑克牌.py" id="generate playing cards">88.生成扑克牌.py</a></h3>
-            <p><a href="../../Project/Python/生成扑克牌.py"\>生成扑克牌</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/求列表第K大元素.py" download="求列表第K大元素.py" id="find Kth largest element in list">89.求列表第K大元素.py</a></h3>
-            <p><a href="../../Project/Python/求列表第K大元素.py"\>求列表第K大元素</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/双色球.py" download="双色球.py" id="Double Chromosphere">90.双色球.py</a></h3>
-            <p><a href="../../Project/Python/双色球.py"\>双色球</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/列表奇数和偶数分开.py" download="列表奇数和偶数分开.py" id="separate odd and even numbers in list">91.列表奇数和偶数分开.py</a></h3>
-            <p><a href="../../Project/Python/列表奇数和偶数分开.py"\>列表奇数和偶数分开</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/字典古诗作者.py" download="字典古诗作者.py" id="dictionary ancient poetry authors">92.字典古诗作者.py</a></h3>
-            <p><a href="../../Project/Python/字典古诗作者.py"\>字典古诗作者</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/用户登录检测模块.py" download="用户登录检测模块.py" id="user login detection module">93.用户登录检测模块.py</a></h3>
-            <p><a href="../../Project/Python/用户登录检测模块.py"\>用户登录检测模块</a></p>
-        </div>
-        </div>
-        <div class="feature-card">
-            <h3><a href="../../Project/Python/字典用户登录.py" download="字典用户登录.py" id="dictionary user login">94.字典用户登录.py</a></h3>
-            <p><a href="../../Project/Python/字典用户登录.py"\>字典用户登录</a></p>
-        </div>
+            <h2>Python共享资源</h2>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求最小公倍数.py" download="求最小公倍数.py" id="py least common multiple">1.求最小公倍数.py</a></h3>
+                <p><a href="../../Project/Python/求最小公倍数.py"\>求最小公倍数</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/最高和最矮.py" download="最高和最矮.py" id="highest and lowest">2.最高和最矮.py</a></h3>
+                <p><a href="../../Project/Python/最高和最矮.py"\>最高和最矮</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/干支纪年.py" download="干支纪年.py" id="Chinese sexagenary cycle">3.干支纪年.py</a></h3>
+                <p><a href="../../Project/Python/干支纪年.py"\>干支纪年</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/判断正数负数还是零.py" download="判断正数负数还是零.py" id="judge positive negative or zero">4.判断正数负数还是零.py</a></h3>
+                <p><a href="../../Project/Python/判断正数负数还是零.py"\>判断正数负数还是零</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/反转三位数.py" download="反转三位数.py" id="reverse three digits">5.反转三位数.py</a></h3>
+                <p><a href="../../Project/Python/反转三位数.py"\>反转三位数</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/凯撒密码.py" download="凯撒密码.py" id="Ceasar cipher">6.凯撒密码.py</a></h3>
+                <p><a href="../../Project/Python/凯撒密码.py"\>凯撒密码</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求组合数.py" download="求组合数.py" id="combination">7.求组合数.py</a></h3>
+                <p><a href="../../Project/Python/求组合数.py"\>求组合数</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/判断BMI.py" download="判断BMI.py" id="judge BMI">8.判断BMI.py</a></h3>
+                <p><a href="../../Project/Python/判断BMI.py"\>判断BMI</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求阶乘和.py" download="求阶乘和.py" id="factorial sum">9.求阶乘和.py</a></h3>
+                <p><a href="../../Project/Python/求阶乘和.py"\>求阶乘和</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求pi的近似值.py" download="求pi的近似值.py" id="approximate pi">10.求pi的近似值.py</a></h3>
+                <p><a href="../../Project/Python/求pi的近似值.py"\>求pi的近似值</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/提高成绩.py" download="提高成绩.py" id="improve score">11.提高成绩.py</a></h3>
+                <p><a href="../../Project/Python/提高成绩.py"\>提高成绩</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/猜数.py" download="猜数.py" id="guess number">12.猜数.py</a></h3>
+                <p><a href="../../Project/Python/猜数.py"\>猜数</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/存钱旅游.py" download="存钱旅游.py" id="save money for travel">13.存钱旅游.py</a></h3>
+                <p><a href="../../Project/Python/存钱旅游.py"\>存钱旅游</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/尼拉坎特哈级数求π近似值.py" download="尼拉坎特哈级数求π近似值.py" id="Nilakantha series for Pi">14.尼拉坎特哈级数求π近似值.py</a></h3>
+                <p><a href="../../Project/Python/尼拉坎特哈级数求π近似值.py"\>尼拉坎特哈级数求π近似值</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求圆的周长和面积.py" download="求圆的周长和面积.py" id="circle circumference and area">15.求圆的周长和面积.py</a></h3>
+                <p><a href="../../Project/Python/求圆的周长和面积.py"\>求圆的周长和面积</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/打印矩形.py" download="打印矩形.py" id="print rectangle">16.打印矩形.py</a></h3>
+                <p><a href="../../Project/Python/打印矩形.py"\>打印矩形</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/三角形面积.py" download="三角形面积.py" id="triangle area">17.三角形面积.py</a></h3>
+                <p><a href="../../Project/Python/三角形面积.py"\>三角形面积</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/区间测速.py" download="区间测速.py" id="interval speed">18.区间测速.py</a></h3>
+                <p><a href="../../Project/Python/区间测速.py"\>区间测速</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/水仙花数.py" download="水仙花数.py" id="Narcissus number">19.水仙花数.py</a></h3>
+                <p><a href="../../Project/Python/水仙花数.py"\>水仙花数</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/输出1千到1万之间的素数.py" download="输出1千到1万之间的素数.py" id="output prime numbers between 1000 and 10000">20.输出1千到1万之间的素数.py</a></h3>
+                <p><a href="../../Project/Python/输出1千到1万之间的素数.py"\>输出1千到1万之间的素数</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/找出三个数中最大的数.py" download="找出三个数中最大的数.py" id="find the largest of three numbers">21.找出三个数中最大的数.py</a></h3>
+                <p><a href="../../Project/Python/找出三个数中最大的数.py"\>找出三个数中最大的数</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/打的计费.py" download="打的计费.py" id="taxi fare calculation">22.打的计费.py</a></h3>
+                <p><a href="../../Project/Python/打的计费.py"\>打的计费</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/计算1-2+3-4…+99-100的值.py" download="计算1-2+3-4…+99-100的值.py" id="calculate alternating sum">23.计算1-2+3-4…+99-100的值.py</a></h3>
+                <p><a href="../../Project/Python/计算1-2+3-4…+99-100的值.py"\>计算1-2+3-4…+99-100的值</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/麦粒.py" download="麦粒.py" id="wheat grains">24.麦粒.py</a></h3>
+                <p><a href="../../Project/Python/麦粒.py"\>麦粒</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/编码.py" download="编码.py" id="encoding">25.编码.py</a></h3>
+                <p><a href="../../Project/Python/编码.py"\>编码</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/极差.py" download="极差.py" id="range">26.极差.py</a></h3>
+                <p><a href="../../Project/Python/极差.py"\>极差</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/能力值.py" download="能力值.py" id="ability value">27.能力值.py</a></h3>
+                <p><a href="../../Project/Python/能力值.py"\>能力值</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/值班.py" download="值班.py" id="duty">28.值班.py</a></h3>
+                <p><a href="../../Project/Python/值班.py"\>值班</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/五角星.py" download="五角星.py" id="pentagram">29.五角星.py</a></h3>
+                <p><a href="../../Project/Python/五角星.py"\>五角星</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/八边形.py" download="八边形.py" id="octagon">30.八边形.py</a></h3>
+                <p><a href="../../Project/Python/八边形.py"\>八边形</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/八角图形.py" download="八角图形.py" id="octagonal shape">31.八角图形.py</a></h3>
+                <p><a href="../../Project/Python/八角图形.py"\>八角图形</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/圆的面积计算.py" download="圆的面积计算.py" id="circle area calculation">32.圆的面积计算.py</a></h3>
+                <p><a href="../../Project/Python/圆的面积计算.py"\>圆的面积计算</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/奥运五环.py" download="奥运五环.py" id="Olympic rings">33.奥运五环.py</a></h3>
+                <p><a href="../../Project/Python/奥运五环.py"\>奥运五环</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/输出学生信息.py" download="输出学生信息.py" id="output student information">34.输出学生信息.py</a></h3>
+                <p><a href="../../Project/Python/输出学生信息.py"\>输出学生信息</a></p>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/三角形周长和面积.py" download="三角形周长和面积.py" id="triangle perimeter and area">35.三角形周长和面积.py</a></h3>
+                <p><a href="../../Project/Python/三角形周长和面积.py"\>三角形周长和面积</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/正向索引和反向索引.py" download="正向索引和反向索引.py" id="forward and backward indexing">36.正向索引和反向索引.py</a></h3>
+                <p><a href="../../Project/Python/正向索引和反向索引.py"\>正向索引和反向索引</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/五星红旗.py" download="五星红旗.py" id="Five-star red flag">37.五星红旗.py</a></h3>
+                <p><a href="../../Project/Python/五星红旗.py"\>五星红旗</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/正向切片.py" download="正向切片.py" id="forward slicing">38.正向切片.py</a></h3>
+                <p><a href="../../Project/Python/正向切片.py"\>正向切片</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/存款利息.py" download="存款利息.py" id="deposit interest">39.存款利息.py</a></h3>
+                <p><a href="../../Project/Python/存款利息.py"\>存款利息</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/反向切片.py" download="反向切片.py" id="backward slicing">40.反向切片.py</a></h3>
+                <p><a href="../../Project/Python/反向切片.py"\>反向切片</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/藏头诗.py" download="藏头诗.py" id="acrostic poem">41.藏头诗.py</a></h3>
+                <p><a href="../../Project/Python/藏头诗.py"\>藏头诗</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/回文诗.py" download="回文诗.py" id="palindrome poem">42.回文诗.py</a></h3>
+                <p><a href="../../Project/Python/回文诗.py"\>回文诗</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/字符串压缩.py" download="字符串压缩.py" id="string compression">43.字符串压缩.py</a></h3>
+                <p><a href="../../Project/Python/字符串压缩.py"\>字符串压缩</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/手机号替换.py" download="手机号替换.py" id="phone number replacement">44.手机号替换.py</a></h3>
+                <p><a href="../../Project/Python/手机号替换.py"\>手机号替换</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/字符串拼接.py" download="字符串拼接.py" id="string concatenation">45.字符串拼接.py</a></h3>
+                <p><a href="../../Project/Python/字符串拼接.py"\>字符串拼接</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/身份证识别生日.py" download="身份证识别生日.py" id="ID card birthday recognition">46.身份证识别生日.py</a></h3>
+                <p><a href="../../Project/Python/身份证识别生日.py"\>身份证识别生日</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/月份缩写.py" download="月份缩写.py" id="month abbreviation">47.月份缩写.py</a></h3>
+                <p><a href="../../Project/Python/月份编写.py"\>月份编写</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/统计字符个数.py" download="统计字符个数.py" id="count characters">48.统计字符个数.py</a></h3>
+                <p><a href="../../Project/Python/统计字符个数.py"\>统计字符个数</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/飞行员报考资格.py" download="飞行员报考资格.py" id="pilot qualification">49.飞行员报考资格.py</a></h3>
+                <p><a href="../../Project/Python/飞行员报考资格.py"\>飞行员报考资格</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/学费计算.py" download="学费计算.py" id="tuition calculation">50.学费计算.py</a></h3>
+                <p><a href="../../Project/Python/学费计算.py"\>学费计算</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/成绩等级划分.py" download="成绩等级划分.py" id="grade classification">51.成绩等级划分.py</a></h3>
+                <p><a href="../../Project/Python/成绩等级划分.py"\>成绩等级划分</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/日期格式化输出.py" download="日期格式化输出.py" id="date formatting">52.日期格式化输出.py</a></h3>
+                <p><a href="../../Project/Python/日期格式化输出.py"\>日期格式化输出</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/整数四则运算及格式化输出.py" download="整数四则运算及格式化输出.py" id="integer arithmetic and formatting">53.整数四则运算及格式化输出.py</a></h3>
+                <p><a href="../../Project/Python/整数四则运算及格式化输出.py"\>整数四则运算及格式化输出</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/平方根格式化.py" download="平方根格式化.py" id="square root formatting">54.平方根格式化.py</a></h3>
+                <p><a href="../../Project/Python/平方根格式化.py"\>平方根格式化</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/模拟打印超市购物小票.py" download="模拟打印超市购物小票.py" id="supermarket receipt simulation">55.模拟打印超市购物小票.py</a></h3>
+                <p><a href="../../Project/Python/模拟打印超市购物小票.py"\>模拟打印超市购物小票</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/商店找钱给顾客.py" download="商店找钱给顾客.py" id="change for customer">56.商店找钱给顾客.py</a></h3>
+                <p><a href="../../Project/Python/商店找钱给顾客.py"\>商店找钱给顾客</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/每行一个数字输出 0 -（n-1）.py" download="每行一个数字输出 0 -（n-1）.py" id="output numbers from 0 to n-1">57.每行一个数字输出 0 -（n-1）.py</a></h3>
+                <p><a href="../../Project/Python/每行一个数字输出 0 -（n-1）.py"\>每行一个数字输出 0 -（n-1）</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个空格.py" download="在一行内输出 0 -（n-1），每个数字后输出一个空格.py" id="output numbers with spaces">58.在一行内输出 0 -（n-1），每个数字后输出一个空格.py</a></h3>
+                <p><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个空格.py"\>在一行内输出 0 -（n-1），每个数字后输出一个空格</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字间没有空格.py" download="在一行内输出 0 -（n-1），每个数字间没有空格.py" id="output numbers without spaces">59.在一行内输出 0 -（n-1），每个数字间没有空格.py</a></h3>
+                <p><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字间没有空格.py"\>在一行内输出 0 -（n-1），每个数字间没有空格</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个逗号.py" download="在一行内输出 0 -（n-1），每个数字后输出一个逗号.py" id="output numbers with commas">60.在一行内输出 0 -（n-1），每个数字后输出一个逗号.py</a></h3>
+                <p><a href="../../Project/Python/在一行内输出 0 -（n-1），每个数字后输出一个逗号.py"\>在一行内输出 0 -（n-1），每个数字后输出一个逗号</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py" download="当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py" id="output numbers with conditional commas">61.当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py</a></h3>
+                <p><a href="../../Project/Python/当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号.py"\>当i不是最后一个数时，每个数字后输出一个逗号,否则无逗号</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/闰年判定.py" download="闰年判定.py" id="leap year determination">62.闰年判定.py</a></h3>
+                <p><a href="../../Project/Python/闰年判定.py"\>闰年判定</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/20以内奇数的积.py" download="20以内奇数的积.py" id="product of odd numbers under 20">63.20以内奇数的积.py</a></h3>
+                <p><a href="../../Project/Python/20以内奇数的积.py"\>20以内奇数的积</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/根据出生年份判断是否成年人.py" download="根据出生年份判断是否成年人.py" id="adult determination">64.根据出生年份判断是否成年人.py</a></h3>
+                <p><a href="../../Project/Python/根据出生年份判断是否成年人.py"\>根据出生年份判断是否成年人</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/两个整数升序排列并输出.py" download="两个整数升序排列并输出.py" id="sort two integers">65.两个整数升序排列并输出.py</a></h3>
+                <p><a href="../../Project/Python/两个整数升序排列并输出.py"\>两个整数升序排列并输出</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求两个数的较大者.py" download="求两个数的较大者.py">66.求两个数的较大者.py</a></h3>
+                <p><a href="../../Project/Python/求两个数的较大者.py"\>求两个数的较大者</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/计算阶梯电价.py" download="计算阶梯电价.py" id="calculate tiered electricity price">67.计算阶梯电价.py</a></h3>
+                <p><a href="../../Project/Python/计算阶梯电价.py"\>计算阶梯电价</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/简易AQI.py" download="简易AQI.py" id="simple AQI">68.简易AQI.py</a></h3>
+                <p><a href="../../Project/Python/简易AQI.py"\>简易AQI</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/判断三角形是否成立并计算面积.py" download="判断三角形是否成立并计算面积.py" id="triangle validity and area">69.判断三角形是否成立并计算面积.py</a></h3>
+                <p><a href="../../Project/Python/判断三角形是否成立并计算面积.py"\>判断三角形是否成立并计算面积</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/简易版个税计算.py" download="简易版个税计算.py" id="simple income tax calculation">70.简易版个税计算.py</a></h3>
+                <p><a href="../../Project/Python/简易版个税计算.py"\>简易版个税计算</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求学生某门课的平均成绩.py" download="求学生某门课的平均成绩.py" id="average grade for a cours">71.求学生某门课的平均成绩.py</a></h3>
+                <p><a href="../../Project/Python/求学生某门课的平均成绩.py"\>求学生某门课的平均成绩</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/统计字符个数（新）.py" download="统计字符个数（新）.py" id="count characters new">72.统计字符个数（新）.py</a></h3>
+                <p><a href="../../Project/Python/统计字符个数（新）.py"\>统计字符个数（新）</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/加减乘除测试程序.py" download="加减乘除测试程序.py" id="arithmetic test program">73.加减乘除测试程序.py</a></h3>
+                <p><a href="../../Project/Python/加减乘除测试程序.py"\>加减乘除测试程序</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/剪刀石头布.py" download="剪刀石头布.py" id="rock paper scissors">74.剪刀石头布.py</a></h3>
+                <p><a href="../../Project/Python/剪刀石头布.py"\>剪刀石头布</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/Unicode编码方法以统计中文字符.py" download="Unicode编码方法以统计中文字符.py" id="Unicode encoding for Chinese characters">75.Unicode编码方法以统计中文字符.py</a></h3>
+                <p><a href="../../Project/Python/Unicode编码方法以统计中文字符.py"\>Unicode编码方法以统计中文字符</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/分数求和.py" download="分数求和.py" id="fraction sum">76.分数求和.py</a></h3>
+                <p><a href="../../Project/Python/分数求和.py"\>分数求和</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/1000以内的完数.py" download="1000以内的完数.py" id="product of odd numbers under 1000">77.1000以内奇数的积.py</a></h3>
+                <p><a href="../../Project/Python/1000以内的完数.py"\>1000以内的完数</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/输出上三角形九九乘法表.py" download="输出上三角形九九乘法表.py" id="upper triangular multiplication table">78.输出上三角形九九乘法表.py</a></h3>
+                <p><a href="../../Project/Python/输出上三角形九九乘法表.py"\>输出上三角形九九乘法表</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求n的阶乘.py" download="求n的阶乘.py" id="factorial of n">79.求n的阶乘.py</a></h3>
+                <p><a href="../../Project/Python/求n的阶乘.py"\>求n的阶乘</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/列出1~200范围内的所有素数，要求每行输出10个数.py" download="列出1~200范围内的所有素数，要求每行输出10个数.py" id="list primes from 1 to 200">80.列出1~200范围内的所有素数，要求每行输出10个数.py</a></h3>
+                <p><a href="../../Project/Python/列出1~200范围内的所有素数，要求每行输出10个数.py"\>列出1~200范围内的所有素数，要求每行输出10个数</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/百钱买百鸡.py" download="百钱买百鸡.py" id="hundred money hundred chickens">81.百钱买百鸡.py</a></h3>
+                <p><a href="../../Project/Python/百钱买百鸡.py"\>百钱买百鸡</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/斐波那契数列.py" download="斐波那契数列.py" id="Fibonacci sequence">82.斐波那契数列.py</a></h3>
+                <p><a href="../../Project/Python/斐波那契数列.py"\>最斐波那契数列</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/回文数.py" download="回文数.py" id="palindrome number">83.回文数.py</a></h3>
+                <p><a href="../../Project/Python/回文数.py"\>回文数</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/用户登录.py" download="用户登录.py" id="user login">84.用户登录.py</a></h3>
+                <p><a href="../../Project/Python/用户登录.py"\>用户登录</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/水仙花数（新）.py" download="水仙花数（新）.py" id="Narcissus number new">85.水仙花数（新）.py</a></h3>
+                <p><a href="../../Project/Python/水仙花数（新）.py"\>水仙花数（新）</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/元组统计天气.py" download="元组统计天气.py" id="tuple weather statistics">86.元组统计天气.py</a></h3>
+                <p><a href="../../Project/Python/元组统计天气.py"\>元组统计天气</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/学生成绩单.py" download="学生成绩单.py" id="student report card">87.学生成绩单.py</a></h3>
+                <p><a href="../../Project/Python/学生成绩单.py"\>学生成绩单</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/生成扑克牌.py" download="生成扑克牌.py" id="generate playing cards">88.生成扑克牌.py</a></h3>
+                <p><a href="../../Project/Python/生成扑克牌.py"\>生成扑克牌</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/求列表第K大元素.py" download="求列表第K大元素.py" id="find Kth largest element in list">89.求列表第K大元素.py</a></h3>
+                <p><a href="../../Project/Python/求列表第K大元素.py"\>求列表第K大元素</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/双色球.py" download="双色球.py" id="Double Chromosphere">90.双色球.py</a></h3>
+                <p><a href="../../Project/Python/双色球.py"\>双色球</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/列表奇数和偶数分开.py" download="列表奇数和偶数分开.py" id="separate odd and even numbers in list">91.列表奇数和偶数分开.py</a></h3>
+                <p><a href="../../Project/Python/列表奇数和偶数分开.py"\>列表奇数和偶数分开</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/字典古诗作者.py" download="字典古诗作者.py" id="dictionary ancient poetry authors">92.字典古诗作者.py</a></h3>
+                <p><a href="../../Project/Python/字典古诗作者.py"\>字典古诗作者</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/用户登录检测模块.py" download="用户登录检测模块.py" id="user login detection module">93.用户登录检测模块.py</a></h3>
+                <p><a href="../../Project/Python/用户登录检测模块.py"\>用户登录检测模块</a></p>
+            </div>
+            </div>
+            <div class="feature-card">
+                <h3><a href="../../Project/Python/字典用户登录.py" download="字典用户登录.py" id="dictionary user login">94.字典用户登录.py</a></h3>
+                <p><a href="../../Project/Python/字典用户登录.py"\>字典用户登录</a></p>
+            </div>
         </div>
     </section>
 
-    <button id="back-to-top">↑</button>
+    <button type="button" id="back-to-top">↑</button>
 
     <footer>
-        <p>© 2025 御风工作室. 保留所有权利。</p>
+        <p>© 2025 <a href="../main/log.html">御风工作室</a> 保留所有权利。</p>
     </footer>
 </body>
 </html>
